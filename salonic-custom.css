@@ -1,0 +1,797 @@
+/* ============================================================
+   ZEN ZONE — Salonic Custom CSS
+   Paletta: megegyezik a főoldallal (hardcoded hex, CSS var nélkül)
+   ============================================================ */
+
+/* Betűtípusok */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ══════════════════════════════════════
+   BODY / HÁTTÉR
+══════════════════════════════════════ */
+html, body {
+  background-color: #131211 !important;
+  color: #ece8df !important;
+  font-family: 'DM Sans', system-ui, sans-serif !important;
+}
+#widget-booking-container,
+.controller-booking,
+.main-raised,
+.main,
+.section,
+.cd-section,
+.container {
+  background-color: #131211 !important;
+  box-shadow: none !important;
+  color: #ece8df !important;
+}
+
+/* ══════════════════════════════════════
+   LINKEK GLOBÁLISAN — türkiz (#38c8c0) → krém
+   (Ez a fő oka a "kék" neveknek a borbályoknál)
+══════════════════════════════════════ */
+a,
+a:link,
+a:visited {
+  color: #c5bcaa !important;
+  text-decoration: none !important;
+}
+a:hover {
+  color: #ece8df !important;
+  text-decoration: none !important;
+}
+
+/* ══════════════════════════════════════
+   NAVBAR
+══════════════════════════════════════ */
+.navbar {
+  background-color: rgba(27,26,24,0.97) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06) !important;
+}
+.navbar-brand {
+  color: #ece8df !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.06em !important;
+}
+.nav-link, .navbar-nav .nav-link {
+  color: #c5bcaa !important;
+}
+.nav-link:hover {
+  color: #ece8df !important;
+}
+.dropdown-menu {
+  background-color: #1b1a18 !important;
+  border: 1px solid rgba(255,255,255,0.07) !important;
+}
+.dropdown-item {
+  color: #c5bcaa !important;
+}
+.dropdown-item:hover, .dropdown-item.active {
+  background-color: #232220 !important;
+  color: #ece8df !important;
+}
+
+/* ══════════════════════════════════════
+   FŐOLDALI HERO FEJLÉC (bg-primary türkiz → sötét zöld)
+══════════════════════════════════════ */
+.page-header,
+.page-header.header-filter,
+.bg-primary,
+.header-filter.bg-primary {
+  background-color: #1b1a18 !important;
+  background-image:
+    radial-gradient(ellipse 70% 60% at 50% 50%, rgba(29,56,32,0.5) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 25% 40%, rgba(58,36,24,0.25) 0%, transparent 60%) !important;
+  box-shadow: none !important;
+  color: #ece8df !important;
+}
+.page-header .title,
+.page-header h1,
+.page-header h2,
+.page-header h3,
+.page-header h4 {
+  color: #ece8df !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.04em !important;
+}
+.page-header .booking-index-title {
+  color: #8e8478 !important;
+}
+
+/* ══════════════════════════════════════
+   KÁRTYÁK
+══════════════════════════════════════ */
+.card {
+  background-color: #2b2927 !important;
+  border: 1px solid rgba(255,255,255,0.07) !important;
+  box-shadow: none !important;
+  color: #ece8df !important;
+}
+.card-body {
+  background-color: transparent !important;
+  color: #ece8df !important;
+}
+.card-header {
+  background-color: #232220 !important;
+  border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+  color: #ece8df !important;
+}
+/* FONTOS: card-header-info türkiz gradiens → sötét zöld */
+.card-header-info,
+.card.bg-info,
+.card-header.card-header-info {
+  background: linear-gradient(60deg, #1d3820, #29502e) !important;
+  box-shadow: 0 5px 20px 0 rgba(0,0,0,0.3), 0 13px 24px -11px rgba(29,56,32,0.5) !important;
+  color: #ece8df !important;
+}
+.card-title, .card-description, .card-category {
+  color: #c5bcaa !important;
+}
+.card-footer {
+  background-color: #232220 !important;
+  border-top: 1px solid rgba(255,255,255,0.07) !important;
+}
+
+/* ══════════════════════════════════════
+   GOMBOK — türkiz → fa-barna
+══════════════════════════════════════ */
+.btn-primary,
+.btn.btn-primary,
+.btn.btn-next.btn-primary,
+.btn.salonic-gradient-button,
+.btn.btn-primary.salonic-gradient-button {
+  background-color: #5a3a24 !important;
+  border-color: #7a5035 !important;
+  background-image: none !important;
+  color: #ece8df !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.35) !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+}
+.btn-primary:hover,
+.btn.btn-primary:hover,
+.btn.btn-next.btn-primary:hover,
+.btn-primary:focus,
+.btn.btn-primary:focus,
+.btn-primary:not(:disabled):not(.disabled):active {
+  background-color: #7a5035 !important;
+  border-color: #9e6a45 !important;
+  background-image: none !important;
+  color: #ece8df !important;
+  box-shadow: 0 4px 14px rgba(90,58,36,0.45) !important;
+}
+.btn-outline-primary {
+  color: #9e6a45 !important;
+  border-color: #7a5035 !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+.btn-outline-primary:hover {
+  background-color: #5a3a24 !important;
+  color: #ece8df !important;
+}
+.btn-link,
+.btn.btn-primary.btn-link {
+  background-color: transparent !important;
+  color: #9e6a45 !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+.btn-link:hover {
+  color: #c5bcaa !important;
+}
+.btn.btn-just-icon.btn-link {
+  color: #585048 !important;
+}
+.btn.btn-just-icon.btn-link:hover {
+  color: #c5bcaa !important;
+}
+
+/* ══════════════════════════════════════
+   SZOLGÁLTATÁS LISTA — inputGroup (checkbox stílusok)
+   türkiz (#49c5db) → zöld (#437a48)
+══════════════════════════════════════ */
+.inputGroup {
+  background-color: #2b2927 !important;
+  border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+}
+.inputGroup label {
+  color: #c5bcaa !important;
+  padding-left: 1rem !important;
+}
+.inputGroup label:before {
+  background-color: #232220 !important;
+  border-color: rgba(255,255,255,0.1) !important;
+  border-radius: 0 !important;
+}
+/* A checkbox "pipa" kör — türkiz → zöld */
+.inputGroup label:after {
+  border-color: rgba(255,255,255,0.12) !important;
+  background-color: #1b1a18 !important;
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23437a48' fill-rule='nonzero'/%3E%3C/svg%3E") !important;
+}
+/* Kijelölt állapot — türkiz (#49c5db) → zöld (#437a48) */
+.inputGroup input:checked ~ label:after {
+  background-color: #437a48 !important;
+  border-color: rgba(255,255,255,0.2) !important;
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23ece8df' fill-rule='nonzero'/%3E%3C/svg%3E") !important;
+}
+.inputGroup input:checked ~ label {
+  color: #ece8df !important;
+}
+.service-title,
+.list-group-item-specName {
+  color: #ece8df !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 400 !important;
+  font-size: 1.1rem !important;
+}
+.price {
+  color: #9e6a45 !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 300 !important;
+}
+.duration {
+  color: #8e8478 !important;
+  font-size: 0.82rem !important;
+}
+.services-count-label {
+  color: #8e8478 !important;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+}
+
+/* ══════════════════════════════════════
+   LABEL / BADGE — türkiz → zöld/sötét
+══════════════════════════════════════ */
+.label-info,
+.label.label-info,
+.badge-info,
+.badge.badge-info {
+  background-color: #29502e !important;
+  color: #c5bcaa !important;
+  border: 1px solid rgba(67,122,72,0.3) !important;
+}
+.label-primary,
+.badge-primary,
+.badge.badge-primary {
+  background-color: #5a3a24 !important;
+  color: #ece8df !important;
+}
+.bg-info {
+  background-color: #1d3820 !important;
+}
+
+/* ══════════════════════════════════════
+   FORM CONTROL — türkiz aljvonal → fa-barna
+══════════════════════════════════════ */
+.form-control,
+input.form-control,
+textarea.form-control,
+select.form-control {
+  background-color: transparent !important;
+  color: #ece8df !important;
+  background-image:
+    linear-gradient(to top, #7a5035 2px, rgba(0,0,0,0) 2px),
+    linear-gradient(to top, rgba(255,255,255,0.09) 1px, rgba(0,0,0,0) 1px) !important;
+}
+.form-control:focus {
+  color: #ece8df !important;
+  background-image:
+    linear-gradient(to top, #9e6a45 2px, rgba(0,0,0,0) 2px),
+    linear-gradient(to top, rgba(255,255,255,0.09) 1px, rgba(0,0,0,0) 1px) !important;
+}
+.form-control::placeholder {
+  color: #585048 !important;
+}
+.form-control-success,
+.form-control-warning,
+.form-control-danger {
+  background-image:
+    linear-gradient(to top, #7a5035 2px, rgba(0,0,0,0) 2px),
+    linear-gradient(to top, rgba(255,255,255,0.09) 1px, rgba(0,0,0,0) 1px) !important;
+}
+label, .bmd-label-static, .bmd-label-floating, .bmd-label-placeholder {
+  color: #8e8478 !important;
+}
+
+/* ══════════════════════════════════════
+   CHECKBOX / RADIO ÁLTALÁNOS — türkiz → zöld
+══════════════════════════════════════ */
+.check, .checkbox .check {
+  background-color: #437a48 !important;
+}
+.circle { border-color: #29502e !important; }
+.radio .circle::after { background-color: #437a48 !important; }
+.text-primary { color: #9e6a45 !important; }
+.text-info { color: #8e8478 !important; }
+.text-today { color: #9e6a45 !important; }
+.icon-primary, .icon-info { color: #437a48 !important; }
+
+/* ══════════════════════════════════════
+   LIST-GROUP
+══════════════════════════════════════ */
+.list-group-item {
+  background-color: #2b2927 !important;
+  border-color: rgba(255,255,255,0.07) !important;
+  color: #ece8df !important;
+}
+.list-group-item:hover {
+  background-color: #232220 !important;
+}
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+  background-color: #437a48 !important;
+  border-color: #29502e !important;
+  color: #ece8df !important;
+}
+.list-group-item.disabled,
+.list-group-item:disabled {
+  background-color: #1b1a18 !important;
+  color: #585048 !important;
+}
+
+/* ══════════════════════════════════════
+   DÁTUMVÁLASZTÓ
+══════════════════════════════════════ */
+.bootstrap-datetimepicker-widget,
+.picker__holder {
+  background-color: #1b1a18 !important;
+  border-color: rgba(255,255,255,0.07) !important;
+  color: #ece8df !important;
+}
+.picker__day { color: #c5bcaa !important; }
+.picker__day--today {
+  color: #9e6a45 !important;
+  border-color: #7a5035 !important;
+}
+.picker__day--selected,
+.picker__day--selected:hover {
+  background-color: #437a48 !important;
+  border-color: #29502e !important;
+  color: #ece8df !important;
+}
+.picker__day--outfocus { color: #585048 !important; }
+.picker__header {
+  background-color: #232220 !important;
+  color: #ece8df !important;
+}
+/* Mobiscroll */
+.mbsc-selected .mbsc-calendar-cell-text {
+  background-color: #437a48 !important;
+  border-color: #29502e !important;
+}
+.mbsc-button {
+  background-color: #5a3a24 !important;
+  border-color: #7a5035 !important;
+  color: #ece8df !important;
+}
+
+/* ══════════════════════════════════════
+   IDŐPONT GOMBOK
+══════════════════════════════════════ */
+.available-times .btn {
+  background-color: #2b2927 !important;
+  border: 1px solid rgba(255,255,255,0.07) !important;
+  color: #c5bcaa !important;
+}
+.available-times .btn:hover {
+  background-color: #232220 !important;
+  border-color: #7a5035 !important;
+  color: #ece8df !important;
+}
+.available-times .btn.btn-primary,
+.available-times .btn.active {
+  background-color: #437a48 !important;
+  border-color: #29502e !important;
+  color: #ece8df !important;
+}
+
+/* ══════════════════════════════════════
+   PROGRESS BAR / noUiSlider
+══════════════════════════════════════ */
+.progress { background-color: #232220 !important; }
+.progress-bar, .progress-bar-primary { background-color: #5a3a24 !important; }
+.progress-bar-info { background-color: #29502e !important; }
+.noUi-connect { background-color: #5a3a24 !important; }
+.noUi-handle {
+  background-color: #7a5035 !important;
+  border-color: #9e6a45 !important;
+  box-shadow: none !important;
+}
+
+/* ══════════════════════════════════════
+   MODAL
+══════════════════════════════════════ */
+.modal-content {
+  background-color: #1b1a18 !important;
+  border-color: rgba(255,255,255,0.07) !important;
+  color: #ece8df !important;
+}
+.modal-header {
+  background-color: #232220 !important;
+  border-bottom-color: rgba(255,255,255,0.07) !important;
+}
+.modal-footer {
+  background-color: #232220 !important;
+  border-top-color: rgba(255,255,255,0.07) !important;
+}
+
+/* ══════════════════════════════════════
+   FOOTER
+══════════════════════════════════════ */
+footer.footer {
+  background-color: #131211 !important;
+  border-top: 1px solid rgba(255,255,255,0.07) !important;
+  color: #585048 !important;
+}
+.footer-brand {
+  color: #c5bcaa !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 300 !important;
+}
+
+/* ══════════════════════════════════════
+   BORBÉLY PROFILKÁRTYÁK (Employees oldal)
+══════════════════════════════════════ */
+.card.card-profile {
+  background-color: #232220 !important;
+  border: 1px solid rgba(255,255,255,0.07) !important;
+  box-shadow: none !important;
+  text-align: center !important;
+}
+/* Avatar — fehér (#fff) háttér eltávolítása */
+.card-avatar,
+.card-avatar.bg-white {
+  background-color: #131211 !important;
+  border: 3px solid rgba(255,255,255,0.08) !important;
+  box-shadow: none !important;
+}
+.card-avatar img,
+.card-avatar .img {
+  border-radius: 50% !important;
+}
+/* Borbély neve — link, volt türkiz → krém */
+.card-title,
+.card-title a,
+.card-title a:link,
+.card-title a:visited,
+h4.card-title,
+h4.card-title a {
+  color: #ece8df !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 400 !important;
+  font-size: 1.25rem !important;
+  letter-spacing: 0.03em !important;
+}
+.card-title a:hover {
+  color: #c5bcaa !important;
+}
+/* Borbély leírás szöveg */
+.card-description {
+  color: #8e8478 !important;
+  font-size: 0.85rem !important;
+  line-height: 1.7 !important;
+}
+/* Elválasztó vonal a kártyában */
+.card-profile hr {
+  border-color: rgba(255,255,255,0.08) !important;
+}
+/* "Szolgáltatások" szöveg a kártyában */
+.card-body {
+  color: #8e8478 !important;
+}
+
+/* ══════════════════════════════════════
+   KAPCSOLAT OLDAL — Contact form
+══════════════════════════════════════ */
+/* "Küldés" gomb — zöld (#4caf50) → fa-barna */
+.btn-success,
+.btn.btn-success,
+.btn.btn-submit-booking,
+.btn.btn-lg.btn-submit-booking.btn-block.btn-success {
+  background-color: #5a3a24 !important;
+  border-color: #7a5035 !important;
+  background-image: none !important;
+  color: #ece8df !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.35) !important;
+}
+.btn-success:hover,
+.btn.btn-success:hover {
+  background-color: #7a5035 !important;
+  border-color: #9e6a45 !important;
+  color: #ece8df !important;
+}
+/* Hibaüzenet */
+.alert-danger {
+  background-color: rgba(90,30,30,0.3) !important;
+  border-color: rgba(150,50,50,0.4) !important;
+  color: #ece8df !important;
+}
+/* GDPR / Policy link */
+.open-dialog.policy,
+.open-dialog.policy a {
+  color: #9e6a45 !important;
+}
+/* Form group lapok */
+.form-group {
+  color: #ece8df !important;
+}
+.control-label,
+.control-label.required {
+  color: #8e8478 !important;
+}
+.required {
+  color: #9e6a45 !important;
+}
+
+/* ══════════════════════════════════════
+   ÁLTALÁNOS SZÖVEG / HR / INFO
+══════════════════════════════════════ */
+hr {
+  border-color: rgba(255,255,255,0.07) !important;
+}
+/* "Szolgáltatások" és egyéb sima szöveg kártyában */
+.card-body > *:not([class]) {
+  color: #8e8478 !important;
+}
+/* mb-1 text-small text-secondary — pl. időtartam leírás */
+.text-secondary,
+.text-muted {
+  color: #585048 !important;
+}
+.text-strong {
+  color: #ece8df !important;
+  font-weight: 500 !important;
+}
+/* info / success / warning szöveg */
+.text-success { color: #437a48 !important; }
+.text-danger  { color: #9e4040 !important; }
+.text-warning { color: #9e6a45 !important; }
+
+/* ══════════════════════════════════════
+   FOGLALÁS ÖSSZEFOGLALÓJA / booking-info
+══════════════════════════════════════ */
+.booking-info {
+  color: #c5bcaa !important;
+  background-color: #232220 !important;
+  border: 1px solid rgba(255,255,255,0.07) !important;
+}
+
+/* ══════════════════════════════════════
+   MOBISCROLL NAPTÁR — iOS light téma → sötét
+   (theme: 'ios', themeVariant: 'light' a Salonic-ban)
+══════════════════════════════════════ */
+
+/* Alap konténer */
+.mbsc-ios.mbsc-calendar,
+.mbsc-ios .mbsc-calendar,
+.mbsc-calendar,
+.mbsc-datepicker,
+.mbsc-datepicker-inline,
+.mbsc-calendar-slide {
+  background: #1b1a18 !important;
+  color: #c5bcaa !important;
+  border-color: rgba(255,255,255,0.07) !important;
+}
+
+/* Naptár wrapper / border */
+.mbsc-ios .mbsc-calendar-wrapper,
+.mbsc-calendar-wrapper {
+  border-color: rgba(255,255,255,0.07) !important;
+}
+
+/* Header — hónap/év + navigáció */
+.mbsc-ios .mbsc-calendar-header,
+.mbsc-calendar-header,
+.mbsc-calendar-controls,
+.mbsc-picker-header {
+  background: #232220 !important;
+  color: #ece8df !important;
+  border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+}
+.mbsc-ios .mbsc-calendar-month-title,
+.mbsc-calendar-month-title,
+.mbsc-calendar-year-text {
+  color: #ece8df !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.04em !important;
+}
+
+/* Navigációs nyilak (prev/next) */
+.mbsc-ios.mbsc-button,
+.mbsc-ios.mbsc-calendar-button.mbsc-button.mbsc-reset,
+.mbsc-calendar-button {
+  background: transparent !important;
+  color: #9e6a45 !important;
+}
+.mbsc-ios.mbsc-button:hover,
+.mbsc-calendar-button:hover {
+  color: #c5bcaa !important;
+}
+
+/* Hét napjainak fejléce (H K Sze Cs P Szo V) */
+.mbsc-ios .mbsc-calendar-week-day,
+.mbsc-calendar-week-day {
+  background: #232220 !important;
+  color: #585048 !important;
+  border-color: rgba(255,255,255,0.05) !important;
+  font-size: 0.65rem !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+}
+
+/* Naptár cellák alap */
+.mbsc-ios .mbsc-calendar-cell,
+.mbsc-calendar-cell {
+  background: #1b1a18 !important;
+  border-color: rgba(255,255,255,0.04) !important;
+  color: #c5bcaa !important;
+}
+
+/* Napszám szöveg */
+.mbsc-ios .mbsc-calendar-cell-text,
+.mbsc-ios .mbsc-calendar-day-text,
+.mbsc-calendar-cell-text,
+.mbsc-calendar-day-text {
+  color: #c5bcaa !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+/* Hover állapot */
+.mbsc-ios .mbsc-calendar-cell-text:hover,
+.mbsc-calendar-cell-text:hover {
+  background-color: #232220 !important;
+  color: #ece8df !important;
+}
+
+/* Mai nap kiemelése — türkiz → fa-barna */
+.mbsc-ios .mbsc-calendar-today .mbsc-calendar-cell-text,
+.mbsc-ios .mbsc-calendar-today .mbsc-calendar-day-text,
+.mbsc-calendar-today .mbsc-calendar-cell-text,
+.mbsc-calendar-today .mbsc-calendar-day-text,
+.mbsc-ios.mbsc-calendar-today,
+.text-today {
+  color: #9e6a45 !important;
+  border-color: #7a5035 !important;
+  background-color: transparent !important;
+}
+
+/* Kijelölt nap (selected) — kék/#007aff → zöld */
+.mbsc-ios .mbsc-selected .mbsc-calendar-cell-text,
+.mbsc-ios .mbsc-selected .mbsc-calendar-day-text,
+.mbsc-selected .mbsc-calendar-cell-text,
+.mbsc-selected .mbsc-calendar-day-text {
+  background: #437a48 !important;
+  border-color: #29502e !important;
+  color: #ece8df !important;
+}
+
+/* Highlight (elérhető napok) */
+.mbsc-ios .mbsc-calendar-day-highlight:before,
+.mbsc-calendar-day-highlight:before {
+  background: rgba(67,122,72,0.15) !important;
+}
+
+/* Külső napok (előző/következő hónap) */
+.mbsc-ios .mbsc-calendar-day-outer .mbsc-calendar-cell-text,
+.mbsc-calendar-day-outer .mbsc-calendar-cell-text {
+  color: #585048 !important;
+  opacity: 0.5 !important;
+}
+
+/* Nem elérhető (disabled) napok */
+.mbsc-ios .mbsc-calendar-cell.mbsc-disabled .mbsc-calendar-cell-text,
+.mbsc-calendar-cell.mbsc-disabled .mbsc-calendar-cell-text {
+  color: #585048 !important;
+  opacity: 0.3 !important;
+}
+
+/* Hét száma */
+.mbsc-ios .mbsc-calendar-week-nr,
+.mbsc-calendar-week-nr {
+  color: #585048 !important;
+}
+
+/* Dátum megjelenítő sáv felül */
+.mbsc-datepicker-control-date,
+.mbsc-ios .mbsc-datepicker-control-date {
+  background: #232220 !important;
+  color: #ece8df !important;
+  border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+}
+
+/* Datepicker inline border */
+.mbsc-datepicker-inline {
+  border-color: rgba(255,255,255,0.07) !important;
+  background: #1b1a18 !important;
+}
+
+/* Scroll wheel (időpont kerék) */
+.mbsc-ios .mbsc-scroller,
+.mbsc-ios .mbsc-scroller-wheel-cont,
+.mbsc-scroller,
+.mbsc-scroller-wheel-cont,
+.mbsc-scroller-wheel-wrapper {
+  background: #1b1a18 !important;
+  color: #c5bcaa !important;
+}
+.mbsc-ios .mbsc-scroller-wheel-item,
+.mbsc-scroller-wheel-item {
+  color: #8e8478 !important;
+}
+.mbsc-ios .mbsc-scroller-wheel-item.mbsc-selected,
+.mbsc-scroller-wheel-item.mbsc-selected,
+.mbsc-scroller-wheel-item.mbsc-active {
+  color: #ece8df !important;
+}
+.mbsc-ios .mbsc-scroller-wheel-line,
+.mbsc-scroller-wheel-line {
+  background: rgba(255,255,255,0.06) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+.mbsc-ios .mbsc-scroller-wheel-overlay,
+.mbsc-scroller-wheel-overlay {
+  background: linear-gradient(#1b1a18, rgba(27,26,24,0) 52%, rgba(27,26,24,0) 48%, #1b1a18) !important;
+}
+
+/* Időpont tab fejléc */
+.mbsc-datepicker-tab,
+.mbsc-ios .mbsc-datepicker-tab {
+  color: #8e8478 !important;
+  border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+}
+.mbsc-datepicker-tab-active,
+.mbsc-ios .mbsc-datepicker-tab-active {
+  color: #9e6a45 !important;
+  border-bottom-color: #7a5035 !important;
+}
+
+/* Betöltés overlay — fehér (#fff) háttér */
+.available-times-loading,
+.available-times-loading.bg-white {
+  background: #1b1a18 !important;
+  opacity: 0.85 !important;
+}
+
+/* btn-neutral (pl. "vissza" gomb a dátum oldalon) */
+.btn-neutral,
+.btn.btn-neutral {
+  background-color: transparent !important;
+  border: 1px solid rgba(255,255,255,0.12) !important;
+  color: #c5bcaa !important;
+}
+.btn-neutral:hover {
+  background-color: rgba(255,255,255,0.05) !important;
+  color: #ece8df !important;
+}
+
+/* "Kijelölt dátum" szöveg felett */
+.selected-date-text {
+  color: #ece8df !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.03em !important;
+}
+
+/* Alert secondary (info szöveg a dátum oldalon) */
+.alert-secondary {
+  background-color: #232220 !important;
+  border-color: rgba(255,255,255,0.07) !important;
+  color: #8e8478 !important;
+}
+
+/* ══════════════════════════════════════
+   GÖRGETŐSÁV
+══════════════════════════════════════ */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #1b1a18; }
+::-webkit-scrollbar-thumb { background: #5a3a24; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #7a5035; }
