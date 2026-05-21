@@ -555,7 +555,9 @@ html.lang-en .lang-toggle .hu-opt { color: var(--cream-4); }
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    text-align: left;
     min-width: 0;
+    width: auto;
   }
   .hero-title {
     font-size: clamp(2.2rem, 5.5vw, 5rem);
@@ -575,6 +577,7 @@ html.lang-en .lang-toggle .hu-opt { color: var(--cream-4); }
     flex: 1 1 0;
     min-width: 0;
     width: auto;
+    height: auto;
     min-height: 0;
     align-self: stretch;
   }
