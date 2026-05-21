@@ -372,15 +372,14 @@ html.lang-en .lang-toggle .hu-opt { color: var(--cream-4); }
    HERO
    ============================================================ */
 .hero {
-  min-height: 100svh;
+  height: 100svh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
   position: relative;
   overflow: hidden;
-  padding: var(--nav-h) 1.5rem 3rem;
+  padding: var(--nav-h) 1.25rem 1.25rem;
   background:
     radial-gradient(ellipse 70% 50% at 50% 55%, rgba(29, 56, 32, 0.45) 0%, transparent 65%),
     radial-gradient(ellipse 50% 40% at 25% 35%, rgba(58, 36, 24, 0.2) 0%, transparent 55%),
@@ -408,12 +407,24 @@ html.lang-en .lang-toggle .hu-opt { color: var(--cream-4); }
 .hero-content {
   position: relative;
   z-index: 1;
+  flex: 1;
   width: 100%;
   max-width: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: clamp(0.75rem, 2svh, 1.5rem);
+}
+
+/* Mobil: szöveg blokk tölti ki a maradék helyet, tartalom benne középre */
+.hero-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
 }
 .hero-badge {
   display: inline-block;
@@ -425,11 +436,11 @@ html.lang-en .lang-toggle .hu-opt { color: var(--cream-4); }
   margin-bottom: 2rem;
 }
 .hero-logo-img {
-  width: clamp(120px, 16vw, 200px);
-  height: clamp(120px, 16vw, 200px);
+  width: clamp(72px, 13svh, 200px);
+  height: clamp(72px, 13svh, 200px);
   object-fit: cover;
   clip-path: circle(42%);
-  margin: 0 auto 1.5rem;
+  margin: 0 auto clamp(0.5rem, 1.5svh, 1.25rem);
   box-shadow: 0 0 60px rgba(29, 56, 32, 0.35), 0 0 120px rgba(29, 56, 32, 0.15);
   animation: heroFade 1.2s var(--ease) 0.1s both;
 }
@@ -444,7 +455,7 @@ html.lang-en .lang-toggle .hu-opt { color: var(--cream-4); }
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 11vw, 10rem);
+  font-size: clamp(2rem, 6svh, 10rem);
   white-space: nowrap;
   font-weight: 400;
   line-height: 0.95;
@@ -458,19 +469,19 @@ html.lang-en .lang-toggle .hu-opt { color: var(--cream-4); }
 }
 .hero-sub {
   font-family: var(--font-display);
-  font-size: clamp(1rem, 3.5vw, 1.6rem);
+  font-size: clamp(0.9rem, 2.2svh, 1.6rem);
   font-weight: 300;
   font-style: italic;
   letter-spacing: 0.3em;
   color: var(--cream-2);
-  margin-top: 0.25rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.3rem;
   animation: heroUp 1s var(--ease) 0.55s both;
 }
 .hero-tagline {
-  font-size: clamp(0.82rem, 1.6vw, 1rem);
+  font-size: clamp(0.78rem, 1.5svh, 1rem);
   color: var(--cream-3);
-  margin-bottom: 2rem;
+  margin-bottom: clamp(0.75rem, 2svh, 1.5rem);
   font-weight: 300;
   letter-spacing: 0.04em;
   animation: heroUp 1s var(--ease) 0.7s both;
@@ -483,7 +494,8 @@ html.lang-en .lang-toggle .hu-opt { color: var(--cream-4); }
 /* Térkép a heróban */
 .hero-map {
   width: 100%;
-  height: clamp(240px, 38vh, 340px);
+  flex-shrink: 0;
+  height: clamp(200px, 40svh, 340px);
   position: relative;
   overflow: hidden;
   box-shadow:
@@ -527,9 +539,12 @@ html.lang-en .lang-toggle .hu-opt { color: var(--cream-4); }
 
 /* Desktop: split — bal szöveg, jobb térkép */
 @media (min-width: 768px) {
+  .hero {
+    padding: var(--nav-h) 0 1.5rem;
+  }
   .hero-content {
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     text-align: left;
     padding-inline: clamp(2rem, 5vw, 4rem);
     gap: clamp(2rem, 4vw, 4rem);
@@ -547,15 +562,21 @@ html.lang-en .lang-toggle .hu-opt { color: var(--cream-4); }
     white-space: normal;
     word-break: break-word;
   }
+  .hero-logo-img {
+    width: clamp(120px, 14vw, 200px);
+    height: clamp(120px, 14vw, 200px);
+    margin-left: 0;
+    margin-bottom: 1.5rem;
+  }
+  .hero-tagline {
+    margin-bottom: 1.75rem;
+  }
   .hero-map {
     flex: 1 1 0;
     min-width: 0;
     width: auto;
-    height: clamp(420px, 65vh, 580px);
-    align-self: center;
-  }
-  .hero-logo-img {
-    margin-left: 0;
+    min-height: 0;
+    align-self: stretch;
   }
 }
 
