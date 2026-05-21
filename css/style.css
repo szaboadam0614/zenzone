@@ -230,8 +230,6 @@ ul, ol { list-style: none; }
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  margin-left: auto;
-  margin-right: 1rem;
 }
 .nav-social-link {
   display: flex;
