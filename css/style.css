@@ -436,8 +436,8 @@ html.lang-en .lang-toggle .hu-opt { color: var(--cream-4); }
   margin-bottom: 2rem;
 }
 .hero-logo-img {
-  width: clamp(72px, 13svh, 200px);
-  height: clamp(72px, 13svh, 200px);
+  width: clamp(90px, 17svh, 200px);
+  height: clamp(90px, 17svh, 200px);
   object-fit: cover;
   clip-path: circle(42%);
   margin: 0 auto clamp(0.5rem, 1.5svh, 1.25rem);
