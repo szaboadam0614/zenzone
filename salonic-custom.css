@@ -1056,23 +1056,50 @@ body.customer-zenzone .swal-icon--success__line,
 }
 
 /* ══════════════════════════════════════
-   FOGLALÁS RÉSZLETEK — megjegyzés / note szöveg
+   FOGLALÁS RÉSZLETEK — service-data szövegek
+   (Hajvágás, időpont, ár, Megjegyzés, note szöveg)
 ══════════════════════════════════════ */
-.customer-zenzone .booking-details-container .card-body,
-.booking-details-container .card-body {
+
+/* Teljes card-body krém */
+body.customer-zenzone .booking-details-container .card-body,
+body.customer-zenzone .card.card-profile .card-body,
+.customer-zenzone .booking-details-container .card-body {
   color: #c5bcaa !important;
 }
-.customer-zenzone .booking-details-container .card-body h3,
-.customer-zenzone .booking-details-container .card-body h4,
-.booking-details-container .card-body h3,
-.booking-details-container .card-body h4 {
+
+/* Fejlécek (borbély neve, dátum, Megjegyzés h4) */
+body.customer-zenzone .booking-details-container .card-body h3,
+body.customer-zenzone .booking-details-container .card-body h4,
+body.customer-zenzone .card.card-profile .card-body h3,
+body.customer-zenzone .card.card-profile .card-body h4 {
   color: #ece8df !important;
 }
-.customer-zenzone .booking-details-container .service-labels,
-.customer-zenzone .booking-details-container .text-right,
-.booking-details-container .service-labels,
-.booking-details-container .text-right {
+
+/* Szolgáltatás neve */
+body.customer-zenzone .service-title,
+body.customer-zenzone .service-data .service-title {
+  color: #ece8df !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+}
+
+/* Időpont / időtartam sor */
+body.customer-zenzone .service-labels,
+body.customer-zenzone .service-data .service-labels {
   color: #8e8478 !important;
+}
+
+/* Ár */
+body.customer-zenzone .service-data .d-flex span,
+body.customer-zenzone .service-data > div > div > span:not(.service-labels) {
+  color: #9e6a45 !important;
+}
+
+/* Megjegyzés szöveg (plain text node a .service-data-ban) */
+body.customer-zenzone .service-data,
+body.customer-zenzone .service-data div {
+  color: #c5bcaa !important;
 }
 
 /* ══════════════════════════════════════
