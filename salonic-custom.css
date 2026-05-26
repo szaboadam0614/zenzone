@@ -14,6 +14,16 @@ html, body {
   color: #ece8df !important;
   font-family: 'DM Sans', system-ui, sans-serif !important;
 }
+/* .customer-zenzone prefix = magasabb specificitás mint Salonic saját CSS-e */
+.customer-zenzone,
+.customer-zenzone #widget-booking-container,
+.customer-zenzone .controller-booking,
+.customer-zenzone .main-raised,
+.customer-zenzone .main,
+.customer-zenzone .section,
+.customer-zenzone .cd-section,
+.customer-zenzone .container,
+.customer-zenzone .page-container-zenzone,
 #widget-booking-container,
 .controller-booking,
 .main-raised,
@@ -24,6 +34,13 @@ html, body {
   background-color: #131211 !important;
   box-shadow: none !important;
   color: #ece8df !important;
+}
+/* .main.rounded (swal ikon konténer) — fehér alapból sötét */
+.customer-zenzone .main.rounded,
+.main.rounded {
+  background-color: #2b2927 !important;
+  border: 1px solid rgba(255,255,255,0.07) !important;
+  box-shadow: none !important;
 }
 
 /* ══════════════════════════════════════
@@ -116,16 +133,19 @@ a:hover {
 /* ══════════════════════════════════════
    KÁRTYÁK
 ══════════════════════════════════════ */
+.customer-zenzone .card,
 .card {
   background-color: #2b2927 !important;
   border: 1px solid rgba(255,255,255,0.07) !important;
   box-shadow: none !important;
   color: #ece8df !important;
 }
+.customer-zenzone .card-body,
 .card-body {
   background-color: transparent !important;
   color: #ece8df !important;
 }
+.customer-zenzone .card-header,
 .card-header {
   background-color: #232220 !important;
   border-bottom: 1px solid rgba(255,255,255,0.07) !important;
@@ -991,20 +1011,20 @@ button:focus {
 
 /* ══════════════════════════════════════
    SWEETALERT PIPA IKON — igazítás + zöldítés
-   A hide-corners háttere MUSZÁJ egyezzen a szülővel
+   A hide-corners háttere MUSZÁJ egyezzen a szülővel (#2b2927)
 ══════════════════════════════════════ */
-.main.rounded {
-  background-color: #2b2927 !important;
-  border: 1px solid rgba(255,255,255,0.07) !important;
-}
 /* hide-corners fedheti le a gyűrű sarkait csak ha azonos a hátterük */
+.customer-zenzone .swal-icon--success__hide-corners,
 .swal-icon--success__hide-corners {
   background-color: #2b2927 !important;
 }
+.customer-zenzone .swal-icon--success,
+.customer-zenzone .swal-icon--success__ring,
 .swal-icon--success,
 .swal-icon--success__ring {
   border-color: rgba(67,122,72,0.35) !important;
 }
+.customer-zenzone .swal-icon--success__line,
 .swal-icon--success__line {
   background-color: #437a48 !important;
 }
@@ -1012,13 +1032,18 @@ button:focus {
 /* ══════════════════════════════════════
    FOGLALÁS RÉSZLETEK — megjegyzés / note szöveg
 ══════════════════════════════════════ */
+.customer-zenzone .booking-details-container .card-body,
 .booking-details-container .card-body {
   color: #c5bcaa !important;
 }
+.customer-zenzone .booking-details-container .card-body h3,
+.customer-zenzone .booking-details-container .card-body h4,
 .booking-details-container .card-body h3,
 .booking-details-container .card-body h4 {
   color: #ece8df !important;
 }
+.customer-zenzone .booking-details-container .service-labels,
+.customer-zenzone .booking-details-container .text-right,
 .booking-details-container .service-labels,
 .booking-details-container .text-right {
   color: #8e8478 !important;
