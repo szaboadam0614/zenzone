@@ -866,7 +866,7 @@ img.img-circle,
 li.active > a,
 a.active {
   color: #9e6a45 !important;
-  background-color: #232220 !important;
+  background-color: transparent !important;
 }
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-link:focus {
@@ -877,12 +877,24 @@ a.active {
 .nav-link:hover {
   color: #c5bcaa !important;
 }
-/* Dropdown nyitott állapot (pl. HU/EN chooser) */
-.dropdown-toggle::after { border-top-color: #9e6a45 !important; }
+/* Dropdown nyitott állapot — HU/EN language chooser (Bootstrap 4: .show a nav-item-en) */
+.dropdown.show > a.nav-link,
+.dropdown.show > .nav-link,
+.nav-item.show > .nav-link,
+.nav-item.show > a,
 .show > .nav-link,
 .show > .btn-link {
   color: #9e6a45 !important;
+  background-color: transparent !important;
 }
+/* Dropdown-item aktív (kijelölt HU/EN) */
+.dropdown-item.active,
+.dropdown-item:active,
+.dropdown-menu .dropdown-item.active {
+  background-color: #232220 !important;
+  color: #9e6a45 !important;
+}
+.dropdown-toggle::after { border-top-color: #9e6a45 !important; }
 
 /* Services / Foglalás kártya fejléc — erőteljesebb specificitás */
 div.card-header.card-header-info,
@@ -893,11 +905,17 @@ div.card-header.card-header-info,
   color: #ece8df !important;
 }
 
-/* Alert info */
-.alert-info {
+/* Alert — info ÉS primary (pl. "Szolgáltatások" fejléc: alert-primary) */
+.alert-info,
+.alert-primary {
   background-color: rgba(29,56,32,0.25) !important;
   border-color: rgba(67,122,72,0.35) !important;
   color: #c5bcaa !important;
+}
+.alert-primary h4,
+.alert-primary h3,
+.alert-primary .my-0 {
+  color: #ece8df !important;
 }
 
 /* Badge / label maradék */
