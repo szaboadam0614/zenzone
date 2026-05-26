@@ -447,7 +447,9 @@ footer.footer {
 }
 /* Avatar — fehér (#fff) háttér eltávolítása */
 .card-avatar,
-.card-avatar.bg-white {
+.card-avatar.bg-white,
+.card-avatar.border-white,
+.card-avatar.border {
   background-color: #131211 !important;
   border: 3px solid rgba(255,255,255,0.08) !important;
   box-shadow: none !important;
@@ -455,6 +457,13 @@ footer.footer {
 .card-avatar img,
 .card-avatar .img {
   border-radius: 50% !important;
+}
+/* Gyűrű forrása lehet a kép maga is */
+.card-profile img.img-circle,
+.card-profile img.rounded-circle {
+  background-color: #131211 !important;
+  border: 2px solid rgba(255,255,255,0.08) !important;
+  box-shadow: none !important;
 }
 /* Borbély neve — link, volt türkiz → krém */
 .card-title,
@@ -787,6 +796,167 @@ hr {
   border-color: rgba(255,255,255,0.07) !important;
   color: #8e8478 !important;
 }
+
+/* ══════════════════════════════════════
+   VISSZAIGAZOLÁS / TÖRLÉS OLDAL
+   — pipa PNG kép türkiszből zöldre (filter)
+   — avatar fehér gyűrű → sötét
+══════════════════════════════════════ */
+
+/* A check.png valódi raszterkép (CDN), color nem elég — filter kell.
+   Türkisz ≈ 174°, célzöld (#437a48) ≈ 127° → hue-rotate: -47deg */
+img[src*="check"],
+img[src*="check.png"] {
+  filter: hue-rotate(-50deg) saturate(1.15) brightness(0.88) !important;
+}
+
+/* Avatar fehér háttér/gyűrű eltávolítása */
+.booking-confirmed .card-avatar,
+.booking-confirmed .avatar,
+.booking-confirmed img.rounded-circle,
+.booking-confirmed img.img-circle,
+.booking-confirmed .img-circle,
+.booking-confirmed [class*="avatar"],
+.confirmed-avatar,
+.success-icon,
+.booking-confirmed-icon,
+img.rounded-circle,
+img.img-circle,
+.rounded-circle.card-avatar,
+.img-circle {
+  background-color: #131211 !important;
+  border-color: rgba(255,255,255,0.08) !important;
+  box-shadow: none !important;
+}
+.booking-confirmed .card-avatar::before,
+.booking-confirmed .card-avatar::after,
+.booking-confirmed [class*="avatar"]::before,
+.booking-confirmed [class*="avatar"]::after {
+  background-color: transparent !important;
+  border-color: rgba(255,255,255,0.08) !important;
+  box-shadow: none !important;
+}
+
+/* Visszaigazolás szövegek */
+.booking-confirmed .title,
+.booking-confirmed h3,
+.booking-confirmed h4 {
+  color: #ece8df !important;
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 300 !important;
+}
+.booking-confirmed p,
+.booking-confirmed .description {
+  color: #8e8478 !important;
+}
+
+/* ══════════════════════════════════════
+   TÜRKISZ IRTÓ — összes maradék info / teal szín
+   (#38c8c0, #49c5db, #26c6da, #00bcd4, Bootstrap info)
+══════════════════════════════════════ */
+
+/* Nav aktív állapot (language selector, tabs, nav-pills) */
+.nav-link.active,
+.nav-item.active > .nav-link,
+.navbar-nav .nav-item.active .nav-link,
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link,
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link,
+li.active > a,
+a.active {
+  color: #9e6a45 !important;
+  background-color: #232220 !important;
+}
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:focus {
+  border-color: #7a5035 #7a5035 #232220 !important;
+}
+/* Nav-link hover/focus türkisz aljvonal → fa-barna */
+.nav-link:focus,
+.nav-link:hover {
+  color: #c5bcaa !important;
+}
+/* Dropdown nyitott állapot (pl. HU/EN chooser) */
+.dropdown-toggle::after { border-top-color: #9e6a45 !important; }
+.show > .nav-link,
+.show > .btn-link {
+  color: #9e6a45 !important;
+}
+
+/* Services / Foglalás kártya fejléc — erőteljesebb specificitás */
+div.card-header.card-header-info,
+.card > .card-header.card-header-info,
+.card-header-info {
+  background: linear-gradient(60deg, #1d3820, #29502e) !important;
+  box-shadow: 0 4px 20px 0 rgba(0,0,0,0.35), 0 7px 12px -5px rgba(29,56,32,0.4) !important;
+  color: #ece8df !important;
+}
+
+/* Alert info */
+.alert-info {
+  background-color: rgba(29,56,32,0.25) !important;
+  border-color: rgba(67,122,72,0.35) !important;
+  color: #c5bcaa !important;
+}
+
+/* Badge / label maradék */
+.badge-info,
+.label-info,
+.badge.badge-info,
+.label.label-info {
+  background-color: #29502e !important;
+  color: #c5bcaa !important;
+  border: 1px solid rgba(67,122,72,0.3) !important;
+}
+
+/* Border info */
+.border-info { border-color: #29502e !important; }
+.border-primary { border-color: #5a3a24 !important; }
+
+/* Foglalás lépései (step wizard) */
+.booking-steps .step.active,
+.booking-steps .step.done,
+.nav-steps .step.active,
+.wizard-nav .step.active,
+[class*="booking-step"].active,
+[class*="booking-step"].done {
+  background-color: #437a48 !important;
+  border-color: #29502e !important;
+  color: #ece8df !important;
+}
+
+/* Font Awesome / Material icon türkisz → zöld */
+.fa.text-info, .fas.text-info, .far.text-info,
+i.text-info, .material-icons.text-info {
+  color: #437a48 !important;
+}
+
+/* Focus gyűrű (outline) türkisz → fa-barna */
+*:focus {
+  outline-color: rgba(90,58,36,0.5) !important;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  box-shadow: 0 0 0 2px rgba(90,58,36,0.35) !important;
+}
+
+/* Spinner / loading türkisz */
+.spinner-border.text-info,
+.spinner-grow.text-info {
+  color: #437a48 !important;
+}
+
+/* Tooltip */
+.tooltip-inner {
+  background-color: #232220 !important;
+  color: #ece8df !important;
+}
+.tooltip .arrow::before,
+.bs-tooltip-top .arrow::before  { border-top-color: #232220 !important; }
+.bs-tooltip-bottom .arrow::before { border-bottom-color: #232220 !important; }
 
 /* ══════════════════════════════════════
    GÖRGETŐSÁV
