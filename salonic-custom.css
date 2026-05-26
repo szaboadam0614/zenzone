@@ -1015,28 +1015,42 @@ button:focus {
    body.customer-zenzone prefix = max specificitás
 ══════════════════════════════════════ */
 
-/* A konténer és a swal ikon explicit háttere — azonos érték */
+/* .main.rounded konténer sötét */
 body.customer-zenzone .main.rounded,
-body.customer-zenzone .main.rounded .swal-icon,
-body.customer-zenzone .main.rounded .swal-icon--success {
+.customer-zenzone .main.rounded,
+.main.rounded {
   background-color: #2b2927 !important;
+  border: 1px solid rgba(255,255,255,0.07) !important;
 }
 
-/* hide-corners: pontosan a szülő háttere → pipa középre kerül */
+/* A swal-icon kör belseje: Salonic fehérre állítja → transparent kell
+   hogy a szülő (#2b2927) látsszon át */
+body.customer-zenzone .swal-icon,
+body.customer-zenzone .swal-icon--success,
+.customer-zenzone .swal-icon,
+.customer-zenzone .swal-icon--success,
+.swal-icon,
+.swal-icon--success {
+  background-color: transparent !important;
+}
+
+/* hide-corners: a szülőn átlátszó .swal-icon mögött a .main.rounded
+   (#2b2927) látszik → hide-corners is pontosan #2b2927 */
 body.customer-zenzone .swal-icon--success__hide-corners,
 .customer-zenzone .swal-icon--success__hide-corners,
 .swal-icon--success__hide-corners {
   background-color: #2b2927 !important;
 }
 
-/* Pipa szín: zöld */
+/* Pipa zöld szín */
+body.customer-zenzone .swal-icon--success,
 body.customer-zenzone .swal-icon--success__ring,
-body.customer-zenzone .swal-icon.swal-icon--success,
 .swal-icon--success,
 .swal-icon--success__ring {
-  border-color: rgba(67,122,72,0.4) !important;
+  border-color: rgba(67,122,72,0.5) !important;
 }
 body.customer-zenzone .swal-icon--success__line,
+.customer-zenzone .swal-icon--success__line,
 .swal-icon--success__line {
   background-color: #437a48 !important;
 }
