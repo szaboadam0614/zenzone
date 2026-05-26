@@ -133,6 +133,9 @@ a:hover {
 /* ══════════════════════════════════════
    KÁRTYÁK
 ══════════════════════════════════════ */
+body.customer-zenzone .card,
+body.customer-zenzone .card.card-profile,
+body.customer-zenzone .booking-details-container .card,
 .customer-zenzone .card,
 .card {
   background-color: #2b2927 !important;
@@ -140,11 +143,15 @@ a:hover {
   box-shadow: none !important;
   color: #ece8df !important;
 }
+body.customer-zenzone .card-body,
+body.customer-zenzone .card.card-profile .card-body,
+body.customer-zenzone .booking-details-container .card-body,
 .customer-zenzone .card-body,
 .card-body {
   background-color: transparent !important;
   color: #ece8df !important;
 }
+body.customer-zenzone .card-header,
 .customer-zenzone .card-header,
 .card-header {
   background-color: #232220 !important;
@@ -1077,7 +1084,8 @@ body.customer-zenzone .card.card-profile .card-body h4 {
 
 /* Szolgáltatás neve */
 body.customer-zenzone .service-title,
-body.customer-zenzone .service-data .service-title {
+body.customer-zenzone .service-data .service-title,
+.service-title {
   color: #ece8df !important;
   font-family: 'Cormorant Garamond', Georgia, serif !important;
   font-weight: 400 !important;
@@ -1086,19 +1094,22 @@ body.customer-zenzone .service-data .service-title {
 
 /* Időpont / időtartam sor */
 body.customer-zenzone .service-labels,
-body.customer-zenzone .service-data .service-labels {
-  color: #8e8478 !important;
+body.customer-zenzone .service-data .service-labels,
+.service-labels {
+  color: #c5bcaa !important;
 }
 
 /* Ár */
 body.customer-zenzone .service-data .d-flex span,
-body.customer-zenzone .service-data > div > div > span:not(.service-labels) {
-  color: #9e6a45 !important;
+body.customer-zenzone .service-data > div > div > span:not(.service-labels),
+body.customer-zenzone .service-data span {
+  color: #c5bcaa !important;
 }
 
-/* Megjegyzés szöveg (plain text node a .service-data-ban) */
+/* Megjegyzés szöveg és minden szöveg a service-data-ban */
 body.customer-zenzone .service-data,
-body.customer-zenzone .service-data div {
+body.customer-zenzone .service-data *,
+.service-data {
   color: #c5bcaa !important;
 }
 
