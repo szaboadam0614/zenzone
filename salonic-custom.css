@@ -1011,20 +1011,32 @@ button:focus {
 
 /* ══════════════════════════════════════
    SWEETALERT PIPA IKON — igazítás + zöldítés
-   A hide-corners háttere MUSZÁJ egyezzen a szülővel (#2b2927)
+   hide-corners MUSZÁJ = szülő (.swal-icon) háttere
+   body.customer-zenzone prefix = max specificitás
 ══════════════════════════════════════ */
-/* hide-corners fedheti le a gyűrű sarkait csak ha azonos a hátterük */
+
+/* A konténer és a swal ikon explicit háttere — azonos érték */
+body.customer-zenzone .main.rounded,
+body.customer-zenzone .main.rounded .swal-icon,
+body.customer-zenzone .main.rounded .swal-icon--success {
+  background-color: #2b2927 !important;
+}
+
+/* hide-corners: pontosan a szülő háttere → pipa középre kerül */
+body.customer-zenzone .swal-icon--success__hide-corners,
 .customer-zenzone .swal-icon--success__hide-corners,
 .swal-icon--success__hide-corners {
   background-color: #2b2927 !important;
 }
-.customer-zenzone .swal-icon--success,
-.customer-zenzone .swal-icon--success__ring,
+
+/* Pipa szín: zöld */
+body.customer-zenzone .swal-icon--success__ring,
+body.customer-zenzone .swal-icon.swal-icon--success,
 .swal-icon--success,
 .swal-icon--success__ring {
-  border-color: rgba(67,122,72,0.35) !important;
+  border-color: rgba(67,122,72,0.4) !important;
 }
-.customer-zenzone .swal-icon--success__line,
+body.customer-zenzone .swal-icon--success__line,
 .swal-icon--success__line {
   background-color: #437a48 !important;
 }
