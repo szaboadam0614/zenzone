@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sikeres foglalás | Zen Zone Barbershop</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#131211" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .thankyou-page {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      background:
+        radial-gradient(ellipse 70% 50% at 50% 55%, rgba(29, 56, 32, 0.35) 0%, transparent 65%),
+        var(--bg);
+    }
+    .thankyou-logo {
+      width: clamp(90px, 20vw, 130px);
+      height: clamp(90px, 20vw, 130px);
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 0 50px rgba(29, 56, 32, 0.3);
+      animation: tyFade 1s var(--ease) 0.1s both;
+    }
+    .thankyou-check {
+      width: 52px; height: 52px;
+      margin: 0 auto 2rem;
+      color: var(--green-lt);
+      animation: tyFade 0.8s var(--ease) 0.3s both;
+    }
+    .thankyou-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 7vw, 3.8rem);
+      font-weight: 300;
+      color: var(--cream);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      animation: tyUp 0.9s var(--ease) 0.4s both;
+    }
+    .thankyou-sub {
+      font-size: clamp(0.9rem, 2vw, 1.05rem);
+      color: var(--cream-3);
+      max-width: 38ch;
+      line-height: 1.75;
+      margin-bottom: 1rem;
+      animation: tyUp 0.9s var(--ease) 0.55s both;
+    }
+    .thankyou-cta-text {
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      color: var(--cream-3);
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      animation: tyUp 0.9s var(--ease) 0.7s both;
+    }
+    .thankyou-socials {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      animation: tyUp 0.9s var(--ease) 0.85s both;
+    }
+    .thankyou-social-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.85rem 1.6rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04);
+      color: var(--cream-2);
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      transition: background var(--trans), border-color var(--trans), color var(--trans);
+    }
+    .thankyou-social-btn:hover {
+      background: rgba(90, 58, 36, 0.25);
+      border-color: var(--wood-mid);
+      color: var(--cream);
+    }
+    .thankyou-social-btn svg {
+      width: 18px; height: 18px;
+      flex-shrink: 0;
+    }
+    .thankyou-social-label {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      gap: 2px;
+    }
+    .thankyou-social-handle {
+      font-size: 0.68rem;
+      color: var(--cream-4);
+      letter-spacing: 0.04em;
+    }
+    .thankyou-divider {
+      width: 40px; height: 1px;
+      background: var(--wood-mid);
+      margin: 2.5rem auto;
+      animation: tyFade 0.8s var(--ease) 1s both;
+    }
+    .thankyou-back {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--cream-4);
+      text-decoration: none;
+      transition: color var(--trans);
+      animation: tyFade 0.8s var(--ease) 1.1s both;
+    }
+    .thankyou-back:hover { color: var(--cream-2); }
+
+    @keyframes tyFade {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes tyUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="noise" aria-hidden="true"></div>
+
+<main class="thankyou-page">
+
+  <img src="logo.jpg" alt="Zen Zone Barbershop" class="thankyou-logo" />
+
+  <svg class="thankyou-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+    <polyline points="22 4 12 14.01 9 11.01"/>
+  </svg>
+
+  <h1 class="thankyou-title">Sikeres foglalás!</h1>
+
+  <p class="thankyou-sub">
+    Köszönjük, hogy hozzánk foglaltál időpontot.<br/>
+    Hamarosan visszaigazolást külünk.
+  </p>
+
+  <p class="thankyou-cta-text">Kövess be minket az aktuális hírekért</p>
+
+  <div class="thankyou-socials">
+    <a
+      href="https://www.instagram.com/zenzonebarbershop?igsh=MWxrNDg3cmZpeGM4Yg%3D%3D"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="thankyou-social-btn"
+      aria-label="ZenZone Barbershop Instagram"
+    >
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="20" rx="5"/>
+        <circle cx="12" cy="12" r="5"/>
+        <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+      </svg>
+      <div class="thankyou-social-label">
+        <span>Szalon</span>
+        <span class="thankyou-social-handle">@zenzonebarbershop</span>
+      </div>
+    </a>
+
+    <a
+      href="https://www.instagram.com/barbar_borbely?igsh=MXdycWJoYzRuZGxkeg%3D%3D"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="thankyou-social-btn"
+      aria-label="Barbar Borbély Instagram"
+    >
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="20" rx="5"/>
+        <circle cx="12" cy="12" r="5"/>
+        <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+      </svg>
+      <div class="thankyou-social-label">
+        <span>Borbély</span>
+        <span class="thankyou-social-handle">@barbar_borbely</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="thankyou-divider"></div>
+
+  <a href="index.html" class="thankyou-back">← Vissza a főoldalra</a>
+
+</main>
+
+</body>
+</html>
