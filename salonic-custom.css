@@ -504,8 +504,8 @@ h4.card-title a {
 .card-profile hr {
   border-color: rgba(255,255,255,0.08) !important;
 }
-/* "Szolgáltatások" szöveg a kártyában */
-.card-body {
+/* "Szolgáltatások" szöveg — csak a profil kártyában (nem felülírja az összes card-body-t) */
+.card-profile .card-body {
   color: #8e8478 !important;
 }
 
@@ -988,6 +988,41 @@ button:focus {
 .tooltip .arrow::before,
 .bs-tooltip-top .arrow::before  { border-top-color: #232220 !important; }
 .bs-tooltip-bottom .arrow::before { border-bottom-color: #232220 !important; }
+
+/* ══════════════════════════════════════
+   SWEETALERT PIPA IKON — igazítás + zöldítés
+   A hide-corners háttere MUSZÁJ egyezzen a szülővel
+══════════════════════════════════════ */
+.main.rounded {
+  background-color: #2b2927 !important;
+  border: 1px solid rgba(255,255,255,0.07) !important;
+}
+/* hide-corners fedheti le a gyűrű sarkait csak ha azonos a hátterük */
+.swal-icon--success__hide-corners {
+  background-color: #2b2927 !important;
+}
+.swal-icon--success,
+.swal-icon--success__ring {
+  border-color: rgba(67,122,72,0.35) !important;
+}
+.swal-icon--success__line {
+  background-color: #437a48 !important;
+}
+
+/* ══════════════════════════════════════
+   FOGLALÁS RÉSZLETEK — megjegyzés / note szöveg
+══════════════════════════════════════ */
+.booking-details-container .card-body {
+  color: #c5bcaa !important;
+}
+.booking-details-container .card-body h3,
+.booking-details-container .card-body h4 {
+  color: #ece8df !important;
+}
+.booking-details-container .service-labels,
+.booking-details-container .text-right {
+  color: #8e8478 !important;
+}
 
 /* ══════════════════════════════════════
    GÖRGETŐSÁV
